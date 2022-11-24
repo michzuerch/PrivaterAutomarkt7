@@ -7,7 +7,6 @@ import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 import image from '@astrojs/image';
 import mdx from '@astrojs/mdx';
-import partytown from '@astrojs/partytown';
 
 import { remarkReadingTime } from './src/utils/frontmatter.js';
 
@@ -36,10 +35,6 @@ export default defineConfig({
 		}),
 		mdx(),
 
-		/* Disable this integration if you don't use Google Analytics (or other external script). */
-		partytown({
-			config: { forward: ['dataLayer.push'] },
-		}),
 	],
 
 	markdown: {

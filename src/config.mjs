@@ -1,11 +1,11 @@
 export const SITE = {
-	name: 'AstroWind',
+	name: 'PrivaterAutomarkt7',
 
-	origin: 'https://astrowind.vercel.app',
-	basePathname: '/',
+	origin: 'https://michzuerch.github.io/',
+	basePathname: '/PrivaterAutomarkt7',
 	trailingSlash: false,
 
-	title: 'AstroWind — Your website with Astro + Tailwind CSS',
+	title: 'Privater Automarkt Radolfzell',
 	description: '🚀 AstroWind is a free and ready to start template to make your website using Astro and Tailwind CSS.',
 
 	googleAnalyticsId: false, // or "G-XXXXXXXXXX",
