@@ -2,7 +2,7 @@ export const SITE = {
 	name: 'PrivaterAutomarkt7',
 
 	origin: 'https://michzuerch.github.io/',
-	basePathname: '/PrivaterAutomarkt7/',
+	basePathname: '/PrivaterAutomarkt7',
 	trailingSlash: false,
 
 	title: 'Privater Automarkt Radolfzell',
@@ -13,7 +13,7 @@ export const SITE = {
 };
 
 export const BLOG = {
-	disabled: false,
+	disabled: true,
 	postsPerPage: 4,
 
 	blog: {
