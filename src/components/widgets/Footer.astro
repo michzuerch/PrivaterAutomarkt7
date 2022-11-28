@@ -1,118 +1,51 @@
 ---
 import { Icon } from 'astro-icon';
-import { getHomePermalink, getRelativeLink } from '~/utils/permalinks';
-
-const links = [
-	{
-		title: 'Product',
-		items: [
-			{ title: 'Features', href: '#' },
-			{ title: 'Security', href: '#' },
-			{ title: 'Team', href: '#' },
-			{ title: 'Enterprise', href: '#' },
-			{ title: 'Customer stories', href: '#' },
-			{ title: 'Pricing', href: '#' },
-			{ title: 'Resources', href: '#' },
-		],
-	},
-	{
-		title: 'Platform',
-		items: [
-			{ title: 'Developer API', href: '#' },
-			{ title: 'Partners', href: '#' },
-			{ title: 'Atom', href: '#' },
-			{ title: 'Electron', href: '#' },
-			{ title: 'AstroWind Desktop', href: '#' },
-		],
-	},
-	{
-		title: 'Support',
-		items: [
-			{ title: 'Docs', href: '#' },
-			{ title: 'Community Forum', href: '#' },
-			{ title: 'Professional Services', href: '#' },
-			{ title: 'Skills', href: '#' },
-			{ title: 'Status', href: '#' },
-		],
-	},
-	{
-		title: 'Company',
-		items: [
-			{ title: 'About', href: '#' },
-			{ title: 'Blog', href: '#' },
-			{ title: 'Careers', href: '#' },
-			{ title: 'Press', href: '#' },
-			{ title: 'Inclusion', href: '#' },
-			{ title: 'Social Impact', href: '#' },
-			{ title: 'Shop', href: '#' },
-		],
-	},
-];
-
-const social = [
-	{ label: 'Twitter', icon: 'tabler:brand-twitter', href: '#' },
-	{ label: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
-	{ label: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
-	{ label: 'RSS', icon: 'tabler:rss', href: getRelativeLink('/rss.xml') },
-	{ label: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
-];
 ---
 
-<footer class="border-t border-gray-200 dark:border-slate-800">
-	<div class="max-w-6xl mx-auto px-4 sm:px-6">
-		<div class="grid grid-cols-12 gap-4 gap-y-8 sm:gap-8 py-8 md:py-12">
-			<div class="col-span-12 lg:col-span-4">
-				<div class="mb-2">
-					<a class="inline-block font-bold text-xl" href={getHomePermalink()}>Privater Automarkt</a>
-				</div>
+<footer class="text-center lg:text-left bg-gray-100 text-gray-600">
+	<div class="mx-6 py-10 text-left">
+		<div class="grid grid-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+			<div class="pl-8">
+				<h6 class="font-semibold mb-4 flex justify-center md:justify-start">Öffnungszeiten</h6>
 
-				<div class="text-base text-gray-600">Öffnungszeiten</div>
-				<div class="flex justify-center items-center">
-					<table class="table-auto">
-						<tr>
-							<td>Montag - Freitag</td>
-							<td class="text-right"><span class="ml-6">9:00 bis 18:00</span></td>
-						</tr>
-						<tr>
-							<td>Samstag</td>
-							<td class="text-right"><span class="ml-6">9:00 bis 14:00</span></td>
-						</tr>
-					</table>
-				</div>
-
-				<!-- <div class="text-sm text-gray-600">
-					<a
-						class="text-gray-600 hover:text-gray-700 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
-						href="#">Terms</a
-					> ·
-					<a
-						class="text-gray-600 hover:text-gray-700 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
-						href="#">Privacy Policy</a
-					>
-				</div> -->
-
+				<table class="table-auto">
+					<tr>
+						<td>Montag - Freitag</td>
+						<td class="text-right"><span class="ml-6">9:00 bis 18:00</span></td>
+					</tr>
+					<tr>
+						<td>Samstag</td>
+						<td class="text-right"><span class="ml-6">9:00 bis 14:00</span></td>
+					</tr>
+				</table>
 			</div>
-			{
-				links.map(({ title, items }) => (
-					<div class="col-span-6 md:col-span-3 lg:col-span-2">
-						<div class="text-gray-800 dark:text-gray-300 font-medium mb-2">{title}</div>
-						{items && Array.isArray(items) && items.length > 0 && (
-							<ul class="text-sm">
-								{items.map(({ title, href }) => (
-									<li class="mb-2">
-										<a
-											class="text-gray-600 hover:text-gray-700 hover:underline dark:text-gray-400 transition duration-150 ease-in-out"
-											href={href}
-										>
-											{title}
-										</a>
-									</li>
-								))}
-							</ul>
-						)}
-					</div>
-				))
-			}
+			<div class="">
+				<h6 class="font-semibold mb-4 flex justify-center md:justify-start">Kontakt</h6>
+				<p class="flex items-center justify-center md:justify-start mb-4">
+					<Icon class="w-6 mr-6" name="mdi:address-marker-outline" />
+						Privater Automarkt<br>
+						Herrenlandstrasse 39<br>
+						78315 Radolfzell<br>
+				</p>
+				<p class="flex items-center justify-center md:justify-start mb-4">
+					<Icon class="w-6 mr-6" name="ic:outline-email" />
+					info@billig-car.de
+				</p>
+				<p class="flex items-center justify-center md:justify-start mb-4">
+					<Icon class="w-6 mr-6" name="bi:telephone" />
+					+49 - (0)7732-942407
+				</p>
+				<p class="flex items-center justify-center md:justify-start">
+					<Icon class="w-6 mr-6" name="ic:outline-fax" />
+					+49 - (0)7732-942408
+				</p>
+			</div>
 		</div>
+	</div>
+	<div class="text-center p-6 bg-gray-200">
+		<span>© 2021 Copyright:</span>
+		<a class="text-gray-600 font-semibold" href="https://github.com/michzuerch/PrivaterAutomarkt7"
+			>michzuerch@gmail.com</a
+		>
 	</div>
 </footer>
