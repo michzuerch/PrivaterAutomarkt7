@@ -2,10 +2,10 @@
 import { Icon } from 'astro-icon';
 ---
 
-<footer class="text-center bg-gray-100 text-gray-600">
+<footer class="text-start bg-gray-100 text-gray-600">
 	<div class="mx-auto py-10">
-		<div class="grid grid-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-			<div class="">
+		<div class="flex flex-wrap gap-8">
+			<div class="flex-auto">
 				<h6 class="font-semibold mb-4 flex justify-center">Öffnungszeiten</h6>
 
 				<table class="table-auto">
@@ -19,23 +19,23 @@ import { Icon } from 'astro-icon';
 					</tr>
 				</table>
 			</div>
-			<div class="">
-				<h6 class="font-semibold mb-4 flex justify-center justify-center">Kontakt</h6>
-				<p class="flex items-center justify-center mb-4">
+			<div class="flex-auto">
+				<h6 class="font-semibold mb-4 flex justify-center">Kontakt</h6>
+				<p class="flex items-center justify-start mb-4">
 					<Icon class="w-6 mr-6" name="mdi:address-marker-outline" />
 						Privater Automarkt<br>
 						Herrenlandstrasse 39<br>
 						78315 Radolfzell<br>
 				</p>
-				<p class="flex items-center justify-center md:justify-start mb-4">
+				<p class="flex items-start justify-start mb-4">
 					<Icon class="w-6 mr-6" name="ic:outline-email" />
 					info@billig-car.de
 				</p>
-				<p class="flex items-center justify-center mb-4">
+				<p class="flex items-start justify-start mb-4">
 					<Icon class="w-6 mr-6" name="bi:telephone" />
 					+49 - (0)7732-942407
 				</p>
-				<p class="flex items-center justify-center">
+				<p class="flex items-start justify-start">
 					<Icon class="w-6 mr-6" name="ic:outline-fax" />
 					+49 - (0)7732-942408
 				</p>
