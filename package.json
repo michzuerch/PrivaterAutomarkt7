@@ -60,6 +60,8 @@
         "node": "^14.15.0 || >=16.0.0"
     },
     "dependencies": {
+        "@astrojs/alpinejs": "^0.1.2",
+        "@types/alpinejs": "^3.7.1",
         "daisyui": "^2.42.1"
     }
 }
