@@ -6,7 +6,7 @@ export const SITE = {
 	trailingSlash: false,
 
 	title: 'Privater Automarkt Radolfzell',
-	description: '🚀 AstroWind is a free and ready to start template to make your website using Astro and Tailwind CSS.',
+	description: 'An- und Verkauf von Fahrzeugen in Radolfzell',
 
 	googleAnalyticsId: false, // or "G-XXXXXXXXXX",
 	googleSiteVerificationId: 'orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M',

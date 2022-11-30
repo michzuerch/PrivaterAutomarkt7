@@ -45,21 +45,21 @@
 
 			let href;
 			switch (network) {
-				case 'facebook':
-					href = `https://www.facebook.com/sharer.php?u=${url}`;
-					break;
-				case 'twitter':
-					href = `https://twitter.com/intent/tweet?url=${url}&text=${text}`;
-					break;
-				case 'linkedin':
-					href = `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${text}`;
-					break;
-				case 'whatsapp':
-					href = `https://wa.me/?text=${text}%20${url}`;
-					break;
-				case 'mail':
-					href = `mailto:?subject=%22${text}%22&body=${text}%20${url}`;
-					break;
+				// case 'facebook':
+				// 	href = `https://www.facebook.com/sharer.php?u=${url}`;
+				// 	break;
+				// case 'twitter':
+				// 	href = `https://twitter.com/intent/tweet?url=${url}&text=${text}`;
+				// 	break;
+				// case 'linkedin':
+				// 	href = `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${text}`;
+				// 	break;
+				// case 'whatsapp':
+				// 	href = `https://wa.me/?text=${text}%20${url}`;
+				// 	break;
+				// case 'mail':
+				// 	href = `mailto:?subject=%22${text}%22&body=${text}%20${url}`;
+				// 	break;
 
 				default:
 					return;

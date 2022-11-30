@@ -26,7 +26,7 @@ import { getHomePermalink, getBlogPermalink, getPermalink, getRelativeLink } fro
 			aria-label="Main navigation"
 		>
 			<ul class="flex flex-col pt-8 md:pt-0 md:flex-row md:self-center w-full md:w-auto text-xl md:text-base">
-				<li class="dropdown">
+				<!-- <li class="dropdown">
 					<button
 						class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
 						>Pages</button
@@ -52,20 +52,34 @@ import { getHomePermalink, getBlogPermalink, getPermalink, getRelativeLink } fro
 							>
 						</li>
 					</ul>
-				</li>
+				</li> -->
 				<li>
 					<a
 						class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
-						href={getPermalink('useful-resources-to-create-websites', 'post')}
-						>Resources
+						href={getPermalink('gallery', 'page')}
+						>Fotogalerie
 					</a>
 				</li>
 				<li>
+					<li>
+						<a
+							class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+							href={getPermalink('location', 'page')}
+							>So finden Sie uns
+						</a>
+					</li>
+					<a
+						class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+						href={getPermalink('impressum', 'page')}
+						>Impressum
+					</a>
+				</li>
+				<!-- <li>
 					<a
 						class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
 						href={getBlogPermalink()}>Blog</a
 					>
-				</li>
+				</li> -->
 				<li class="md:hidden">
 					<a
 						class="font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
