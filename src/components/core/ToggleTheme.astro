@@ -3,16 +3,12 @@ import { Icon } from 'astro-icon';
 
 const {
 	label = 'Toggle between Dark and Light mode',
-	class:
-		className = 'text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center',
-	iconClass = 'w-6 h-6',
-	iconName = 'tabler:sun',
 } = Astro.props;
 ---
 
 <label class="swap swap-rotate">
 	<!-- this hidden checkbox controls the state -->
-	<input type="checkbox" class="{className}" aria-label={label} data-aw-toggle-color-scheme />
+    <input type="checkbox" class="{className}" aria-label={label} data-toggle-theme="dark,light" data-act-class="ACTIVECLASS"/>
 
 	<!-- sun icon -->
 	<Icon
@@ -26,6 +22,12 @@ const {
 		class="w-6 h-6 swap-off fill-current text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700"
 	/>
 </label>
+<select data-choose-theme>
+	<option value="light">Light</option>
+	<option value="dark">Dark</option>
+	<option value="pink">Cupcake</option>
+</select>
+<button data-toggle-theme="dark,light" data-act-class="ACTIVECLASS">Dark/Light</button>
 <!-- <button type="button" class={className} aria-label={label} data-aw-toggle-color-scheme>
 	<Icon name={iconName} class={iconClass} />
 </button> -->

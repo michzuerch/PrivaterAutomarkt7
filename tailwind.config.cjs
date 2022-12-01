@@ -5,10 +5,6 @@ module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,svelte,ts,tsx,vue}'],
 	theme: {
 		extend: {
-			colors: {
-				primary: colors.yellow,
-				secondary: colors.pink,
-			},
 			fontFamily: {
 				sans: ["'InterVariable'", ...defaultTheme.fontFamily.sans],
 			},
@@ -16,12 +12,22 @@ module.exports = {
 	},
 	plugins: [require('@tailwindcss/typography'), require('daisyui')],
 	darkMode: 'class',
+	daisyui: {
+		styled: true,
+		base: true,
+		utils: true,
+		logs: true,
+		rtl: false,
+		prefix: '',
+		darkTheme: 'dark',
+		themes: ['light', 'dark', 'cupcake'],
+	},
 };
 
-/* 
+/*
 
   Alternative tailwind.config.js
-  
+
   NOTE: Add this fonts to <head>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&display=swap" rel="stylesheet" />
 */

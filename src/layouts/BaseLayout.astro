@@ -8,18 +8,27 @@ const { meta = {} } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en" class="motion-safe:scroll-smooth 2xl:text-[20px]">
+<html lang="de" data-theme="light" class="antialiased motion-safe:scroll-smooth 2xl:text-[20px]">
 	<head>
 		<MetaTags {...meta} />
+
+		<script is:inline>
+			// ☝️ This script prevent the FART effect.
+			if (localStorage.getItem('theme') === null) {
+				document.documentElement.setAttribute('data-theme', 'light');
+			} else document.documentElement.setAttribute('data-theme', localStorage.getItem('theme'));
+			// "theme" LocalStorage value is set by the package to remember user preference.
+			// The value is checked and applyed before rendering anything.
+		</script>
+		<script>
+			import { themeChange } from 'theme-change';
+			themeChange();
+			// 👆 you could import the CDN directly instead of these two lines
+		</script>
 	</head>
 
-	<body class="antialiased text-gray-900 dark:text-slate-300 tracking-tight bg-white dark:bg-slate-900">
+	<body class="antialiased tracking-tight">
 		<slot />
 		<BasicScripts />
-		<style is:global>
-			img {
-				content-visibility: auto;
-			}
-		</style>
 	</body>
 </html>
