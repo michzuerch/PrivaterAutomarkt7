@@ -30,7 +30,7 @@
     "subfont": "subfont -ir --no-fallbacks --silent --root dist"
   },
   "devDependencies": {
-    "@astrojs/image": "^0.11.6",
+    "@astrojs/image": "^0.12.0",
     "@astrojs/mdx": "^0.12.0",
     "@astrojs/rss": "^1.0.3",
     "@astrojs/sitemap": "^1.0.0",
@@ -42,7 +42,7 @@
     "@types/leaflet": "1.9.0",
     "@typescript-eslint/eslint-plugin": "^5.45.0",
     "@typescript-eslint/parser": "^5.45.0",
-    "astro": "^1.6.11",
+    "astro": "^1.6.12",
     "astro-icon": "^0.8.0",
     "eslint": "^8.28.0",
     "eslint-plugin-astro": "^0.21.0",
@@ -62,8 +62,6 @@
     "node": "^14.15.0 || >=16.0.0"
   },
   "dependencies": {
-    "@astrojs/alpinejs": "^0.1.2",
-    "@types/alpinejs": "^3.7.1",
     "daisyui": "^2.42.1",
     "theme-change": "^2.2.0"
   }

@@ -3,7 +3,7 @@ export const SITE = {
 
 	origin: 'https://michzuerch.github.io/',
 	basePathname: '/PrivaterAutomarkt7',
-	trailingSlash: false,
+	trailingSlash: true,
 
 	title: 'Privater Automarkt Radolfzell',
 	description: 'An- und Verkauf von Fahrzeugen in Radolfzell',

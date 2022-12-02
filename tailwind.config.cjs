@@ -1,5 +1,6 @@
+/** @type {import('tailwindcss').Config} */
 const defaultTheme = require('tailwindcss/defaultTheme');
-const colors = require('tailwindcss/colors');
+//const colors = require('tailwindcss/colors');
 
 module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,svelte,ts,tsx,vue}'],
@@ -20,7 +21,24 @@ module.exports = {
 		rtl: false,
 		prefix: '',
 		darkTheme: 'dark',
-		themes: ['light', 'dark', 'cupcake'],
+		themes: [
+			{
+				companyTheme: {
+					primary: '#4B6BFB',
+					secondary: '#7B92B2',
+					accent: '#67CBA0',
+					neutral: '#181A2A',
+					'base-100': '#FFFFFF',
+					info: '#3ABFF8',
+					success: '#36D399',
+					warning: '#FBBD23',
+					error: '#F87272',
+				},
+			},
+			'light',
+			'dark',
+			'cupcake',
+		],
 	},
 };
 
