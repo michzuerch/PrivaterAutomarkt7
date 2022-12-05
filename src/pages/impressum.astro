@@ -2,7 +2,7 @@
 import { SITE } from '~/config.mjs';
 import { getCanonical, getHomePermalink } from '~/utils/permalinks';
 import Layout from '~/layouts/PageLayout.astro';
-import Features from '~/components/widgets/Features2.astro';
+import Impressum from '~/components/widgets/Impressum.astro';
 
 const meta = {
 	title: SITE.title,
@@ -12,6 +12,5 @@ const meta = {
 ---
 
 <Layout {meta}>
-	<Features />
-	<div class="">Impressum</div>
+	<Impressum />
 </Layout>
