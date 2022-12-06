@@ -2,6 +2,7 @@
 import { Icon } from 'astro-icon';
 ---
 
+<!--
 <footer class="text-start bg-gray-100 text-gray-600">
 	<div class="mx-auto py-10">
 		<div class="flex flex-wrap gap-8">
@@ -48,4 +49,41 @@ import { Icon } from 'astro-icon';
 			>michzuerch@gmail.com</a
 		>
 	</div>
+-->
+<footer class="footer p-10 bg-neutral text-neutral-content">
+	<div>
+		<h3 class="footer-title">Öffnungszeiten</h3>
+		<table class="table-auto">
+			<tr>
+				<td>Montag - Freitag</td>
+				<td class="text-right"><span class="ml-6">9:00 bis 18:00</span></td>
+			</tr>
+			<tr>
+				<td>Samstag</td>
+				<td class="text-right"><span class="ml-6">9:00 bis 14:00</span></td>
+			</tr>
+		</table>
+	</div>
+	<div>
+		<h3 class="footer-title">Kontakt</h3>
+		<p class="flex items-start justify-start">
+			<Icon class="w-6 mr-6" name="mdi:address-marker-outline" />
+			Privater Automarkt<br />
+			Herrenlandstrasse 39<br />
+			78315 Radolfzell<br />
+		</p>
+		<p class="flex items-start justify-start">
+			<Icon class="w-6 mr-6" name="ic:outline-email" />
+			info@billig-car.de
+		</p>
+		<p class="flex items-start justify-start mb-4">
+			<Icon class="w-6 mr-6" name="bi:telephone" />
+			+49 - (0)7732-942407
+		</p>
+		<p class="flex items-start justify-start">
+			<Icon class="w-6 mr-6" name="ic:outline-fax" />
+			+49 - (0)7732-942408
+		</p>
+	</div>
 </footer>
+
