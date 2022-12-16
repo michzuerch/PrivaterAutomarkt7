@@ -1,7 +1,7 @@
 import { chromium, test } from '@playwright/test';
 
 test('Login test demo', async () => {
-	const browser = await chromium.launch();
+	const browser = await chromium.launch({ headless: true });
 	const context = await browser.newContext();
 	const page = await context.newPage();
 
@@ -9,4 +9,7 @@ test('Login test demo', async () => {
 	await page.goto('https://ecommerce-playground.lambdatest.io/');
 	await page.hover("//a[@data-toggle='dropdown']//span[contains(.,'My account')]");
 	await page.click('text=Login');
+	await page.close();
+	await context.close();
+	await browser.close();
 });

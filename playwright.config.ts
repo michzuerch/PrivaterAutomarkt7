@@ -47,12 +47,14 @@ const config: PlaywrightTestConfig = {
 			},
 		},
 
+        /* Tests mobile version
 		{
 			name: 'Mobile Chrome',
 			use: {
 				...devices['Pixel 5'],
 			},
 		},
+        */
 	],
 };
 
