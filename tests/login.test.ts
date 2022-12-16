@@ -7,6 +7,6 @@ test('Login test demo', async () => {
 
 	//await page.goto('https://michzuerch.github.io/');
 	await page.goto('https://ecommerce-playground.lambdatest.io/');
-	await page.hover("//a[@data-toggle='drop-down']//span[contains(.,'My account')]");
-	await page.click('test=Login');
+	await page.hover("//a[@data-toggle='dropdown']//span[contains(.,'My account')]");
+	await page.click('text=Login');
 });

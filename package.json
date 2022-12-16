@@ -26,6 +26,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier -w .",
+    "test": "npx playwright test",
     "lint:eslint": "eslint . --ext .js,.ts,.astro",
     "subfont": "subfont -ir --no-fallbacks --silent --root dist"
   },
