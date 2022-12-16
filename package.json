@@ -63,7 +63,7 @@
     "node": "^14.15.0 || >=16.0.0"
   },
   "dependencies": {
-    "daisyui": "^2.43.2",
+    "daisyui": "^2.45.0",
     "theme-change": "^2.2.0"
   }
 }
