@@ -2,8 +2,8 @@ import type { PlaywrightTestConfig } from '@playwright/test';
 import { devices } from '@playwright/test';
 
 const config: PlaywrightTestConfig = {
-	testDir: './tests',
-	testMatch: ['tests/login.test.ts'],
+	testDir: './src/test',
+	/* testMatch: ['tests/login.test.ts'], */
 	/* Maximum time one test can run for. */
 	timeout: 30 * 1000,
 	expect: {
@@ -21,7 +21,7 @@ const config: PlaywrightTestConfig = {
 	reporter: 'html',
 	/* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
 	use: {
-		headless: false,
+		headless: true,
 		baseURL: 'http://localhost:3000/PrivaterAutomarkt7/',
 		/* Maximum time each action such as `click()` can take. Defaults to 0 (no limit). */
 		actionTimeout: 0,
