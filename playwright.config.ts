@@ -3,8 +3,6 @@ import { devices } from '@playwright/test';
 
 const config: PlaywrightTestConfig = {
 	testDir: './src/test',
-	/* testMatch: ['tests/login.test.ts'], */
-	/* Maximum time one test can run for. */
 	timeout: 30 * 1000,
 	expect: {
 		timeout: 5000,
@@ -17,9 +15,7 @@ const config: PlaywrightTestConfig = {
 	retries: process.env.CI ? 2 : 0,
 	/* Opt out of parallel tests on CI. */
 	workers: process.env.CI ? 1 : undefined,
-	/* Reporter to use. See https://playwright.dev/docs/test-reporters */
 	reporter: 'html',
-	/* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
 	use: {
 		headless: true,
 		baseURL: 'http://localhost:3000/PrivaterAutomarkt7/',
@@ -39,7 +35,6 @@ const config: PlaywrightTestConfig = {
 		reuseExistingServer: !process.env.CI,
 	},
 
-	/* Configure projects for major browsers */
 	projects: [
 		{
 			name: 'chromium',
@@ -61,14 +56,13 @@ const config: PlaywrightTestConfig = {
 				...devices['Desktop Safari'],
 			},
 		},
-
-		/* Tests mobile version
-        {
-            name: 'Mobile Chrome',
-            use: {
-                ...devices['Pixel 5'],
-            },
-        },
+		/*
+		{
+			name: 'Mobile Chrome',
+			use: {
+				...devices['Pixel 5'],
+			},
+		},
         */
 	],
 };

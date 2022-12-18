@@ -4,6 +4,8 @@
     "types": ["@astroja/image/client"],
     "allowJs": true,
     "baseUrl": ".",
+    "strict": true,
+    "module": "commonjs",
     "paths": {
       "~/*": ["src/*"]
     }
