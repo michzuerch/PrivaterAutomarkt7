@@ -30,7 +30,7 @@ test.describe('Location', () => {
 */
 test.describe('Gallery', () => {
 	test('Check link/navigation for gallery', async ({ page }) => {
-		const getGallery = page.getByRole('link', { name: 'Gallery' });
+		const getGallery = page.getByRole('link', { name: 'Galerie' });
 		await expect(getGallery).toHaveAttribute('href', '/PrivaterAutomarkt7/gallery/');
 		await getGallery.click();
 		await expect(page).toHaveURL(/.*gallery/);
