@@ -10,7 +10,6 @@ test.describe('Basics', () => {
 	});
 });
 
-/*
 test.describe('Impressum', () => {
 	test('Check link/navigation for impressum', async ({ page }) => {
 		const getImpressum = page.getByRole('link', { name: 'Impressum' });
@@ -19,15 +18,16 @@ test.describe('Impressum', () => {
 		await expect(page).toHaveURL(/.*impressum/);
 	});
 });
+
 test.describe('Location', () => {
 	test('Check link/navigation for location', async ({ page }) => {
-		const getLocation = page.getByRole('link', { name: 'Location' });
+		const getLocation = page.getByRole('link', { name: 'Standort' });
 		await expect(getLocation).toHaveAttribute('href', '/PrivaterAutomarkt7/location/');
 		await getLocation.click();
 		await expect(page).toHaveURL(/.*location/);
 	});
 });
-*/
+
 test.describe('Gallery', () => {
 	test('Check link/navigation for gallery', async ({ page }) => {
 		const getGallery = page.getByRole('link', { name: 'Galerie' });
