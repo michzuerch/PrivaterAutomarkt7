@@ -2,6 +2,7 @@ import { test, expect, type Page } from '@playwright/test';
 
 test.beforeEach(async ({ page }) => {
 	await page.goto('http://localhost:3000/PrivaterAutomarkt7/');
+	//await page.waitForLoadState('networkidle');
 });
 
 test.describe('Basics', () => {
@@ -10,7 +11,6 @@ test.describe('Basics', () => {
 	});
 });
 
-/*
 test.describe('Impressum', () => {
 	test('Check link/navigation for impressum', async ({ page }) => {
 		const getImpressum = page.getByRole('link', { name: 'Impressum' });
@@ -21,16 +21,17 @@ test.describe('Impressum', () => {
 });
 test.describe('Location', () => {
 	test('Check link/navigation for location', async ({ page }) => {
-		const getLocation = page.getByRole('link', { name: 'Location' });
+		const getLocation = page.getByRole('link', { name: 'Standort' });
 		await expect(getLocation).toHaveAttribute('href', '/PrivaterAutomarkt7/location/');
 		await getLocation.click();
 		await expect(page).toHaveURL(/.*location/);
+        await page.screenshot({ path: 'location.png', fullPage: true });
 	});
 });
-*/
+
 test.describe('Gallery', () => {
 	test('Check link/navigation for gallery', async ({ page }) => {
-		const getGallery = page.getByRole('link', { name: 'Gallery' });
+		const getGallery = page.getByRole('link', { name: 'Galerie' });
 		await expect(getGallery).toHaveAttribute('href', '/PrivaterAutomarkt7/gallery/');
 		await getGallery.click();
 		await expect(page).toHaveURL(/.*gallery/);

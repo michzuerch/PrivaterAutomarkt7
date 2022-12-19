@@ -1,6 +1,6 @@
 {
   "name": "@michzuerch/privaterautomarkt7",
-  "type": "module",
+  "type": "commonjs",
   "description": "homagepage for billig-cars.de using Astro and Tailwind CSS.",
   "version": "0.0.1",
   "private": true,
@@ -26,9 +26,11 @@
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier -w .",
-    "test": "npx playwright test",
+    "test": "playwright test --browser=all",
     "lint:eslint": "eslint . --ext .js,.ts,.astro",
-    "subfont": "subfont -ir --no-fallbacks --silent --root dist"
+    "subfont": "subfont -ir --no-fallbacks --silent --root dist",
+    "test-html-report": "playwright test --browser=all --reporter=html",
+    "test-json-report": "PLAYWRIGHT_JSON_OUTPUT_NAME=results.json playwright test --browser=chromium --reporter=json"
   },
   "devDependencies": {
     "@astrojs/image": "^0.12.1",

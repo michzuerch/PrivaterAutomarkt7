@@ -30,7 +30,7 @@
 [![Issues on GitHub](https://img.shields.io/github/issues/michzuerch/PrivaterAutomarkt7)](https://michzuerch.github.io/PrivaterAutomarkt7)
 [![Stars on GitHub](https://img.shields.io/github/stars/michzuerch/PrivaterAutomarkt7?style=social)](https://michzuerch.github.io/PrivaterAutomarkt7)
 
-```
+```bash
 npm run build
 ```
 
@@ -45,6 +45,23 @@ npm run build
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/michzuerch/PrivaterAutomarkt7)
 
 (Repository already exists for michzuerch)
+
+### Testing width Docker
+
+There is a **Dockerfile** to run your playwright tests on docker.
+To build the image run:
+
+```bash
+docker build -t playwright-docker .
+```
+
+To run the tests:
+
+```bash
+docker run -it playwright-docker:latest npm run test
+```
+
+### Notes for navigation
 
 Get the source on [GitHub](https://github.com/michzuerch/PrivaterAutomarkt7).
 
