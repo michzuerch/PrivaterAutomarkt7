@@ -24,3 +24,4 @@ pnpm-lock.yaml
 /test-results/
 /playwright-report/
 /playwright/.cache/
+results.json
