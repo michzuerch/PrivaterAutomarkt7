@@ -13,3 +13,4 @@ trim_trailing_whitespace = false
 
 [{.*,*.md,*.json,*.toml,*.yml,}]
 indent_style = space
+

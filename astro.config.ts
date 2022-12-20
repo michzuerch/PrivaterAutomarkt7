@@ -15,6 +15,9 @@ export default defineConfig({
 	base: SITE.basePathname,
 	trailingSlash: SITE.trailingSlash ? 'always' : 'never',
 	output: 'static',
+	experimental: {
+		integrations: true
+	},
 	integrations: [
 		tailwind({
 			config: {
