@@ -1,20 +1,23 @@
 ---
-import 'leaflet/dist/leaflet.css';
+import 'leaflet/dist/leaflet.css'
 ---
 
-<div id="map" class="pb-10 w-full h-96"></div>
+<div id='map' class='pb-10 w-full h-96'></div>
 
 <script>
-	import Leaflet from 'leaflet';
+	import Leaflet from 'leaflet'
 
-	const map = Leaflet.map('map').setView([47.74315477543156, 8.954879998216272], 14);
+	const map = Leaflet.map('map').setView([47.74315477543156, 8.954879998216272], 14)
 
 	Leaflet.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
 		maxZoom: 18,
-		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-	}).addTo(map);
+		attribution:
+			'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+	}).addTo(map)
 
-	const marker = Leaflet.marker([47.74315477543156, 8.954879998216272]).addTo(map);
+	const marker = Leaflet.marker([47.74315477543156, 8.954879998216272]).addTo(map)
 
-	marker.bindPopup('<div><b>Privater Automarkt</b><br>Herrenlandstrasse 39<br>78315 Radolfzell</div>').openPopup();
+	marker
+		.bindPopup('<div><b>Privater Automarkt</b><br>Herrenlandstrasse 39<br>78315 Radolfzell</div>')
+		.openPopup()
 </script>

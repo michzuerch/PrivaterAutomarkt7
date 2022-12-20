@@ -1,13 +1,13 @@
-import path from 'path';
-import { fileURLToPath } from 'url';
-import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
-import sitemap from '@astrojs/sitemap';
-import image from '@astrojs/image';
-import mdx from '@astrojs/mdx';
-import { remarkReadingTime } from './src/utils/frontmatter.js';
-import { SITE } from './src/config.mjs';
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+import path from 'path'
+import { fileURLToPath } from 'url'
+import { defineConfig } from 'astro/config'
+import tailwind from '@astrojs/tailwind'
+import sitemap from '@astrojs/sitemap'
+import image from '@astrojs/image'
+import mdx from '@astrojs/mdx'
+import { remarkReadingTime } from './src/utils/frontmatter.js'
+import { SITE } from './src/config.mjs'
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 export default defineConfig({
 	// Astro uses this full URL to generate your sitemap and canonical URLs in your final build
@@ -18,24 +18,24 @@ export default defineConfig({
 	integrations: [
 		tailwind({
 			config: {
-				applyBaseStyles: true,
-			},
+				applyBaseStyles: true
+			}
 		}),
 		sitemap(),
 		image({
-			serviceEntryPoint: '@astrojs/image/sharp',
+			serviceEntryPoint: '@astrojs/image/sharp'
 		}),
-		mdx(),
+		mdx()
 	],
 	markdown: {
 		remarkPlugins: [remarkReadingTime],
-		extendDefaultPlugins: true,
+		extendDefaultPlugins: true
 	},
 	vite: {
 		resolve: {
 			alias: {
-				'~': path.resolve(__dirname, './src'),
-			},
-		},
-	},
-});
+				'~': path.resolve(__dirname, './src')
+			}
+		}
+	}
+})

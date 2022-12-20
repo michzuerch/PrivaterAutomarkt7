@@ -1,5 +1,5 @@
-import type { PlaywrightTestConfig } from '@playwright/test';
-import { devices } from '@playwright/test';
+import type { PlaywrightTestConfig } from '@playwright/test'
+import { devices } from '@playwright/test'
 
 /**
  * Read environment variables from file.
@@ -19,7 +19,7 @@ const config: PlaywrightTestConfig = {
 		 * Maximum time expect() should wait for the condition to be met.
 		 * For example in `await expect(locator).toHaveText();`
 		 */
-		timeout: 5000,
+		timeout: 5000
 	},
 	fullyParallel: true,
 	forbidOnly: !!process.env.CI,
@@ -36,46 +36,46 @@ const config: PlaywrightTestConfig = {
 		actionTimeout: 0,
 		ignoreHTTPSErrors: true,
 		video: 'on',
-		trace: 'on-first-retry',
+		trace: 'on-first-retry'
 	},
 
 	webServer: {
 		command: 'npm run dev',
 		url: 'http://localhost:3000/PrivaterAutomarkt7/',
 		timeout: 120 * 1000,
-		reuseExistingServer: !process.env.CI,
-	},
+		reuseExistingServer: !process.env.CI
+	}
 
-	projects: [
-		{
-			name: 'chromium',
-			use: {
-				...devices['Desktop Chrome'],
-			},
-		},
+	/*
+projects: [
+    {
+        name: 'chromium',
+        use: {
+            ...devices['Desktop Chrome'],
+        },
+    },
 
-		{
-			name: 'firefox',
-			use: {
-				...devices['Desktop Firefox'],
-			},
-		},
+    {
+        name: 'firefox',
+        use: {
+            ...devices['Desktop Firefox'],
+        },
+    },
 
-		{
-			name: 'webkit',
-			use: {
-				...devices['Desktop Safari'],
-			},
-		},
-		/*
-		{
-			name: 'Mobile Chrome',
-			use: {
-				...devices['Pixel 5'],
-			},
-		},
-        */
-	],
-};
+    {
+        name: 'webkit',
+        use: {
+            ...devices['Desktop Safari'],
+        },
+    },
+    {
+        name: 'Mobile Chrome',
+        use: {
+            ...devices['Pixel 5'],
+        },
+    },
+],
+    */
+}
 
-export default config;
+export default config
