@@ -6,7 +6,7 @@ import sitemap from '@astrojs/sitemap'
 import image from '@astrojs/image'
 import mdx from '@astrojs/mdx'
 import { remarkReadingTime } from './src/utils/frontmatter.js'
-import { SITE } from './src/config.mjs'
+import { SITE } from './src/config'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 export default defineConfig({
