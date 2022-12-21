@@ -1,12 +1,12 @@
 # Get the base image of Node version 16
-FROM node:16
+FROM node:latest
 
 # Get the latest version of Playwright
 FROM mcr.microsoft.com/playwright:focal
- 
+
 # Set the work directory for the application
 WORKDIR /app
- 
+
 # Set the environment path to node_modules/.bin
 ENV PATH /app/node_modules/.bin:$PATH
 
