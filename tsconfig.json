@@ -11,15 +11,12 @@
     // Add type definitions for our Vite runtime.
     "types": ["vite/client", "@astrojs/image/client"],
     "paths": {
-      "@store:*": ["store/*"],
       "@components:*": ["components/*"],
-      "@models:*": ["models/*"],
       "@utils:*": ["utils/*"],
       "@/*": ["src/*"],
       "~/*": ["src/*"],
       "atoms:*": ["components/atoms/*.astro"],
       "molecules:*": ["components/molecules/*.astro"],
-      "organisms:*": ["components/organisms/*.astro"],
       "templates:*": ["components/templates/*.astro"]
     }
   },
