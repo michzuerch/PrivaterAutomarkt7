@@ -1,7 +1,7 @@
 {
   "name": "@michzuerch/privaterautomarkt7",
   "type": "module",
-  "description": "homagepage for billig-cars.de using Astro and Tailwind CSS.",
+  "description": "Homepage for billig-cars.de using Astro and Tailwind CSS.",
   "version": "0.0.1",
   "private": true,
   "homepage": "https://github.com/michzuerch/PrivaterAutomarkt7#readme",
@@ -26,7 +26,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier -w .",
-    "test": "npx playwright test --browser=all",
+    "test": "npx playwright test",
     "lint:eslint": "eslint . --ext .js,.ts,.astro",
     "lint:eslint:fix": "eslint . --ext .js,.astro,.ts,.tsx,.vue --fix --debug",
     "subfont": "subfont -ir --no-fallbacks --silent --root dist",
