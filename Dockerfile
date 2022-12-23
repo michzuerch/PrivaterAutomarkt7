@@ -1,5 +1,5 @@
 # Get the base image of Node version 16
-FROM node:latest
+FROM node:19
 
 # Get the latest version of Playwright
 FROM mcr.microsoft.com/playwright:focal
@@ -14,6 +14,8 @@ ENV PATH /app/node_modules/.bin:$PATH
 COPY package.json /app/
 COPY tests/ /app/tests/
 COPY tsconfig.json /app/
+COPY env.d.ts /app/
+COPY global.d.ts /app/
 # COPY config.toml /app/
 
 # Get the needed libraries to run Playwright
