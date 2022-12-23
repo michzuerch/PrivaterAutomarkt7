@@ -11,39 +11,39 @@
 		localStorage.theme === 'dark' ||
 		(!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
 	) {
-		document.documentElement.classList.add('dark');
+		document.documentElement.classList.add('dark')
 	} else {
-		document.documentElement.classList.remove('dark');
+		document.documentElement.classList.remove('dark')
 	}
 
 	function attachEvent(selector, event, fn) {
-		const matches = document.querySelectorAll(selector);
+		const matches = document.querySelectorAll(selector)
 		if (matches && matches.length) {
 			matches.forEach((elem) => {
-				elem.addEventListener(event, () => fn(elem), false);
-			});
+				elem.addEventListener(event, () => fn(elem), false)
+			})
 		}
 	}
 
 	window.onload = function () {
 		attachEvent('[data-aw-toggle-menu]', 'click', function (elem) {
-			elem.classList.toggle('expanded');
-			document.body.classList.toggle('overflow-hidden');
-			document.getElementById('header')?.classList.toggle('h-screen');
-			document.querySelector('#header nav')?.classList.toggle('hidden');
-		});
+			elem.classList.toggle('expanded')
+			document.body.classList.toggle('overflow-hidden')
+			document.getElementById('header')?.classList.toggle('h-screen')
+			document.querySelector('#header nav')?.classList.toggle('hidden')
+		})
 
 		attachEvent('[data-aw-toggle-color-scheme]', 'click', function () {
-			document.documentElement.classList.toggle('dark');
-			localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
-		});
+			document.documentElement.classList.toggle('dark')
+			localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light'
+		})
 
 		attachEvent('[data-aw-social-share]', 'click', function (elem) {
-			const network = elem.getAttribute('data-aw-social-share');
-			const url = encodeURIComponent(elem.getAttribute('data-aw-url'));
-			const text = encodeURIComponent(elem.getAttribute('data-aw-text'));
+			const network = elem.getAttribute('data-aw-social-share')
+			const url = encodeURIComponent(elem.getAttribute('data-aw-url'))
+			const text = encodeURIComponent(elem.getAttribute('data-aw-text'))
 
-			let href;
+			let href
 			switch (network) {
 				// case 'facebook':
 				// 	href = `https://www.facebook.com/sharer.php?u=${url}`;
@@ -62,22 +62,22 @@
 				// 	break;
 
 				default:
-					return;
+					return
 			}
 
-			const newlink = document.createElement('a');
-			newlink.target = '_blank';
-			newlink.href = href;
-			newlink.click();
-		});
-	};
+			const newlink = document.createElement('a')
+			newlink.target = '_blank'
+			newlink.href = href
+			newlink.click()
+		})
+	}
 	window.onpageshow = function () {
-		const elem = document.querySelector('[data-aw-toggle-menu]');
+		const elem = document.querySelector('[data-aw-toggle-menu]')
 		if (elem) {
-			elem.classList.remove('expanded');
+			elem.classList.remove('expanded')
 		}
-		document.body.classList.remove('overflow-hidden');
-		document.getElementById('header')?.classList.remove('h-screen');
-		document.querySelector('#header nav')?.classList.add('hidden');
-	};
+		document.body.classList.remove('overflow-hidden')
+		document.getElementById('header')?.classList.remove('h-screen')
+		document.querySelector('#header nav')?.classList.add('hidden')
+	}
 </script>

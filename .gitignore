@@ -21,3 +21,7 @@ pnpm-debug.log*
 
 package-lock.json
 pnpm-lock.yaml
+/test-results/
+/playwright-report/
+/playwright/.cache/
+results.json
