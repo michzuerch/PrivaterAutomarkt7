@@ -5,7 +5,7 @@ const config: PlaywrightTestConfig = {
 	testDir: './tests',
 	timeout: 60 * 1000,
 	fullyParallel: true,
-	workers: 2,
+	workers: 4,
 	reporter: [['html', { open: 'never' }], ['list']],
 	use: {
 		actionTimeout: 30 * 1000,

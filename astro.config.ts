@@ -16,9 +16,7 @@ export default defineConfig({
 	base: SITE.basePathname,
 	trailingSlash: SITE.trailingSlash ? 'always' : 'never',
 	output: 'static',
-	experimental: {
-		integrations: true
-	},
+	server: { port: 3000, host: true },
 	integrations: [
 		tailwind({
 			config: {
@@ -31,8 +29,11 @@ export default defineConfig({
 		}),
 		mdx(),
 		compress({
-			html: true,
-			css: false
+			css: false,
+			html: false,
+			img: false,
+			js: false,
+			svg: false
 		})
 	],
 	markdown: {

@@ -1,14 +1,11 @@
 {
   "extends": "astro/tsconfigs/base",
   "compilerOptions": {
-    "types": ["@astroja/image/client"],
+    "types": ["astro/client"],
     "allowJs": true,
     "baseUrl": ".",
-    "strict": true,
-    "module": "commonjs",
     "paths": {
       "~/*": ["src/*"]
     }
-  },
-  "include": ["tests"]
+  }
 }
