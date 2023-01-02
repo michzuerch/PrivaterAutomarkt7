@@ -1,0 +1,5 @@
+{
+  "version": "0.0.1",
+  "name": "michzuerch/privaterautomarkt7",
+  "dependencies": { "daisyui": { "version": "2.46.0" }, "theme-change": { "version": "2.2.0" } }
+}

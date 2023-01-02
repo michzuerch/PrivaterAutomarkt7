@@ -1,5 +1,5 @@
 {
-  "name": "michzuerch/privaterautomarkt7",
+  "name": "michzuerch-privaterautomarkt7",
   "type": "module",
   "description": "Homepage for billig-cars.de using Astro and Tailwind CSS.",
   "version": "0.0.1",
@@ -50,7 +50,7 @@
     "astro": "^1.8.0",
     "astro-compress": "1.1.24",
     "astro-icon": "^0.8.0",
-    "eslint": "^8.30.0",
+    "eslint": "^8.31.0",
     "eslint-config-standard": "17.0.0",
     "eslint-plugin-astro": "^0.21.1",
     "eslint-plugin-import": "2.26.0",
@@ -58,8 +58,11 @@
     "eslint-plugin-n": "15.6.0",
     "eslint-plugin-promise": "6.1.1",
     "leaflet": "1.9.3",
+    "lighthouse": "^9.6.8",
     "limax": "^2.1.0",
     "mdast-util-to-string": "^3.1.0",
+    "playwright": "^1.29.1",
+    "playwright-lighthouse": "^2.2.2",
     "prettier": "^2.8.1",
     "prettier-plugin-astro": "^0.7.0",
     "reading-time": "^1.5.0",
@@ -72,7 +75,7 @@
     "node": "^14.15.0 || >=16.0.0"
   },
   "dependencies": {
-    "daisyui": "^2.46.0",
+    "daisyui": "^2.46.1",
     "theme-change": "^2.2.0"
   }
 }
