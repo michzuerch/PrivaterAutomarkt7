@@ -1,5 +1,6 @@
 import { test, expect, chromium } from '@playwright/test'
 import { playAudit } from 'playwright-lighthouse'
+import { devices } from '@playwright/test'
 
 test.beforeEach(async ({ page }) => {
 	await page.goto('http://localhost:3000/PrivaterAutomarkt7/')
@@ -34,8 +35,39 @@ test.describe('Links from index', () => {
 	})
 })
 
+const lighthouseConfig: PlaywrightTestConfig = {
+	testDir: './tests',
+	timeout: 60 * 1000,
+	fullyParallel: true,
+	workers: 4,
+	reporter: [['html', { open: 'never' }], ['list']],
+	use: {
+		actionTimeout: 30 * 1000,
+		headless: true,
+		locale: 'de-DE',
+		baseURL: 'http://localhost:3000/PrivaterAutomarkt7/',
+		viewport: { width: 600, height: 900 },
+		ignoreHTTPSErrors: true,
+		video: 'on',
+		trace: 'on'
+	},
+	projects: [
+		{
+			name: 'chromium',
+			use: { ...devices['Desktop Chrome'] }
+		},
+	],
+
+	webServer: {
+		command: 'npm run dev',
+		url: 'http://localhost:3000/PrivaterAutomarkt7/',
+		timeout: 30 * 1000,
+		reuseExistingServer: true
+	}
+}
+
 test.describe('Lighthouse score', () => {
-	//test.use(config)
+	test.use(lighthouseConfig)
 	test(`Lighthouse performance test`, async () => {
 		const browser = await chromium.launch({
 			args: ['--remote-debugging-port=9222'],
@@ -58,10 +90,11 @@ test.describe('Lighthouse score', () => {
 			reports: {
 				formats: {
 					html: true,
-					csv: true,
-					json: true
+					csv: false,
+					json: false
 				},
-				name: `ligthouse-${new Date().toISOString()}`, //defaults to `lighthouse-${new Date().getTime()}`
+				//name: `ligthouse-${new Date().toISOString()}`, //defaults to `lighthouse-${new Date().getTime()}`
+				name: `ligthouse`, //defaults to `lighthouse-${new Date().getTime()}`
 				directory: `${process.cwd()}/lighthouse` //defaults to `${process.cwd()}/lighthouse`
 			}
 		})
