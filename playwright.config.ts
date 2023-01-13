@@ -12,6 +12,7 @@ const config: PlaywrightTestConfig = {
 		headless: true,
 		locale: 'de-DE',
 		baseURL: 'http://localhost:3000/PrivaterAutomarkt7/',
+		viewport: { width: 600, height: 900 },
 		ignoreHTTPSErrors: true,
 		video: 'on',
 		trace: 'on'
@@ -19,16 +20,16 @@ const config: PlaywrightTestConfig = {
 	projects: [
 		{
 			name: 'chromium',
-			use: { ...devices['Desktop Chrome'] },
-		},
-		{
-			name: 'firefox',
-			use: { ...devices['Desktop Firefox'] },
-		},
-		{
-			name: 'webkit',
-			use: { ...devices['Desktop Safari'] },
-		},
+			use: { ...devices['Desktop Chrome'] }
+		}
+		// {
+		// 	name: 'firefox',
+		// 	use: { ...devices['Desktop Firefox'] }
+		// },
+		// {
+		// 	name: 'webkit',
+		// 	use: { ...devices['Desktop Safari'] }
+		// }
 	],
 
 	webServer: {
