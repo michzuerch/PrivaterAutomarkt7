@@ -32,4 +32,3 @@ test.describe('Links from index', () => {
 		await expect(page).toHaveURL(/.*gallery/)
 	})
 })
-

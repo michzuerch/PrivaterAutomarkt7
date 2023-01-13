@@ -1,5 +1,4 @@
-
-import { test, expect, chromium } from '@playwright/test'
+import { test, chromium } from '@playwright/test'
 import { playAudit } from 'playwright-lighthouse'
 
 test.beforeEach(async ({ page }) => {
@@ -8,7 +7,7 @@ test.beforeEach(async ({ page }) => {
 })
 
 test.describe('Lighthouse score', () => {
-	test.skip(({ browserName }) => browserName !== 'chromium', 'Chromium only!')
+	test.skip(({ browserName }) => browserName !== 'chromium', 'Chromium only for lighthouse')
 
 	test('Lighthouse score', async () => {
 		const browser = await chromium.launch({
