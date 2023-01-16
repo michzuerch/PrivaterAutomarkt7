@@ -22,6 +22,7 @@
 
 ### GitHub
 
+[![Playwright Tests](https://github.com/michzuerch/PrivaterAutomarkt7/actions/workflows/playwright.yml/badge.svg?branch=deploy)](https://github.com/michzuerch/PrivaterAutomarkt7/actions/workflows/playwright.yml)
 [![GitHub last commit](https://img.shields.io/github/last-commit/michzuerch/PrivaterAutomarkt7)](https://michzuerch.github.io/PrivaterAutomarkt7)
 [![Commits per month](https://img.shields.io/github/commit-activity/m/michzuerch/PrivaterAutomarkt7)](https://michzuerch.github.io/PrivaterAutomarkt7)
 [![Releases on GitHub](https://img.shields.io/github/v/release/michzuerch/PrivaterAutomarkt7)](https://michzuerch.github.io/PrivaterAutomarkt7)
