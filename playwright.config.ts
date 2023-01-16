@@ -2,11 +2,14 @@ import type { PlaywrightTestConfig } from '@playwright/test'
 import { devices } from '@playwright/test'
 
 const config: PlaywrightTestConfig = {
+	outputDir: './playwright-report',
 	testDir: './tests',
 	timeout: 60 * 1000,
 	fullyParallel: true,
 	workers: 4,
-	reporter: [['html', { open: 'never' }], ['list']],
+	reporter: process.env.CI
+		? 'github'
+		: [['html', { open: 'on-failure', outputFolder: 'test-report' }], ['list']],
 	use: {
 		actionTimeout: 30 * 1000,
 		headless: true,
