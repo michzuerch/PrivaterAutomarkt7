@@ -1,33 +1,33 @@
 ---
-import '~/assets/styles/base.css'
+import '~/assets/styles/base.css';
 
-import MetaTags from '~/components/core/MetaTags.astro'
-import BasicScripts from '~/components/core/BasicScripts.astro'
+import MetaTags from '~/components/core/MetaTags.astro';
+import BasicScripts from '~/components/core/BasicScripts.astro';
 
-const { meta = {} } = Astro.props
+const { meta = {} } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang='de' data-theme='light' class='antialiased motion-safe:scroll-smooth 2xl:text-[20px]'>
+<html lang="de" data-theme="light" class="antialiased motion-safe:scroll-smooth 2xl:text-[20px]">
 	<head>
 		<MetaTags {...meta} />
 
 		<script is:inline>
 			// ☝️ This script prevent the FART effect.
 			if (localStorage.getItem('theme') === null) {
-				document.documentElement.setAttribute('data-theme', 'light')
-			} else document.documentElement.setAttribute('data-theme', localStorage.getItem('theme'))
+				document.documentElement.setAttribute('data-theme', 'light');
+			} else document.documentElement.setAttribute('data-theme', localStorage.getItem('theme'));
 			// "theme" LocalStorage value is set by the package to remember user preference.
 			// The value is checked and applyed before rendering anything.
 		</script>
 		<script>
-			import { themeChange } from 'theme-change'
-			themeChange()
+			import { themeChange } from 'theme-change';
+			themeChange();
 			// 👆 you could import the CDN directly instead of these two lines
 		</script>
 	</head>
 
-	<body class='antialiased tracking-tight'>
+	<body class="antialiased tracking-tight">
 		<slot />
 		<BasicScripts />
 	</body>

@@ -1,21 +1,21 @@
 ---
-import { AstroSeo } from '@astrolib/seo'
-import { GoogleAnalytics } from '@astrolib/analytics'
-import { getImage } from '@astrojs/image'
-import { getRelativeUrlByFilePath } from '~/utils/directories'
+import { AstroSeo } from '@astrolib/seo';
+import { GoogleAnalytics } from '@astrolib/analytics';
+import { getImage } from '@astrojs/image';
+import { getRelativeUrlByFilePath } from '~/utils/directories';
 
-import defaultImageSrc from '~/assets/images/Hero.jpg'
+import defaultImageSrc from '~/assets/images/Hero.jpg';
 
-import { SITE } from '~/config'
-import Fonts from '../atoms/Fonts.astro'
-import ExtraMetaTags from '../atoms/ExtraMetaTags.astro'
-import SplitbeeAnalytics from './SplitbeeAnalytics.astro'
+import { SITE } from '~/config';
+import Fonts from '../atoms/Fonts.astro';
+import ExtraMetaTags from '../atoms/ExtraMetaTags.astro';
+import SplitbeeAnalytics from './SplitbeeAnalytics.astro';
 
 const { src: defaultImage } = await getImage({
 	src: defaultImageSrc,
 	width: 1200,
-	height: 628
-})
+	height: 628,
+});
 
 const {
 	title = SITE.name,
@@ -27,20 +27,20 @@ const {
 	nofollow = false,
 
 	ogTitle = title,
-	ogType = 'website'
-} = Astro.props
+	ogType = 'website',
+} = Astro.props;
 
 const image =
 	typeof _image === 'string'
 		? new URL(_image, Astro.site)
 		: _image && typeof _image['src'] !== 'undefined'
 		? new URL(getRelativeUrlByFilePath(_image.src), Astro.site)
-		: null
+		: null;
 ---
 
-<meta charset='UTF-8' />
-<meta name='viewport' content='width=device-width, initial-scale=1.0' />
-<meta name='color-scheme' content='dark light' />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="color-scheme" content="dark light" />
 
 <AstroSeo
 	title={title}
@@ -57,16 +57,16 @@ const image =
 			? [
 					{
 						url: image.toString(),
-						alt: ogTitle
-					}
+						alt: ogTitle,
+					},
 			  ]
-			: undefined
+			: undefined,
 		// site_name: 'SiteName',
 	}}
 	twitter={{
 		// handle: '@handle',
 		// site: '@site',
-		cardType: image ? 'summary_large_image' : undefined
+		cardType: image ? 'summary_large_image' : undefined,
 	}}
 />
 
@@ -75,7 +75,7 @@ const image =
 <!-- Google Site Verification -->
 {
 	SITE.googleSiteVerificationId && (
-		<meta name='google-site-verification' content={SITE.googleSiteVerificationId} />
+		<meta name="google-site-verification" content={SITE.googleSiteVerificationId} />
 	)
 }
 

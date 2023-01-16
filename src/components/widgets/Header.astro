@@ -1,34 +1,34 @@
 ---
-import Logo from '~/components/atoms/Logo.astro'
-import ToggleTheme from '~/components/core/ToggleTheme.astro'
+import Logo from '~/components/atoms/Logo.astro';
+import ToggleTheme from '~/components/core/ToggleTheme.astro';
 
 import {
 	getHomePermalink,
 	getBlogPermalink,
 	getPermalink,
-	getRelativeLink
-} from '~/utils/permalinks'
+	getRelativeLink,
+} from '~/utils/permalinks';
 ---
 
-<header class='sticky top-0 z-40 flex-none mx-auto w-full md:backdrop-blur-sm' id='header'>
-	<div class='navbar bg-base-100'>
-		<div class='navbar-start'>
-			<div class='dropdown'>
-				<label tabindex='0' class='btn btn-ghost lg:hidden'>
+<header class="sticky top-0 z-40 flex-none mx-auto w-full md:backdrop-blur-sm" id="header">
+	<div class="navbar bg-base-100">
+		<div class="navbar-start">
+			<div class="dropdown">
+				<label tabindex="0" class="btn btn-ghost lg:hidden">
 					<svg
-						xmlns='http://www.w3.org/2000/svg'
-						class='w-5 h-5'
-						fill='none'
-						viewBox='0 0 24 24'
-						stroke='currentColor'
+						xmlns="http://www.w3.org/2000/svg"
+						class="w-5 h-5"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
 						><path
-							stroke-linecap='round'
-							stroke-linejoin='round'
-							stroke-width='2'
-							d='M4 6h16M4 12h8m-8 6h16'></path>
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M4 6h16M4 12h8m-8 6h16"></path>
 					</svg>
 				</label>
-				<ul class='p-2 mt-3 w-52 shadow menu menu-compact dropdown-content bg-base-100 rounded-box'>
+				<ul class="p-2 mt-3 w-52 shadow menu menu-compact dropdown-content bg-base-100 rounded-box">
 					<li><a href={getPermalink('gallery', 'page')}>Fotogalerie</a></li>
 					<li><a href={getPermalink('location', 'page')}>Standort</a></li>
 					<li><a href={getPermalink('impressum', 'page')}>Impressum</a></li>
@@ -36,14 +36,14 @@ import {
 			</div>
 			<Logo />
 		</div>
-		<div class='hidden navbar-center lg:flex'>
-			<ul class='p-0 menu menu-horizontal'>
+		<div class="hidden navbar-center lg:flex">
+			<ul class="p-0 menu menu-horizontal">
 				<li><a href={getPermalink('gallery', 'page')}>Galerie</a></li>
 				<li><a href={getPermalink('location', 'page')}>Standort</a></li>
 				<li><a href={getPermalink('impressum', 'page')}>Impressum</a></li>
 			</ul>
 		</div>
-		<div class='pl-3 navbar-end'>
+		<div class="pl-3 navbar-end">
 			<ToggleTheme />
 		</div>
 	</div>

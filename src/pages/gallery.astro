@@ -1,18 +1,18 @@
 ---
-import { SITE } from '~/config'
-import { getCanonical, getHomePermalink } from '~/utils/permalinks'
-import Layout from '~/layouts/PageLayout.astro'
-import { Image, Picture } from '@astrojs/image/components'
+import { SITE } from '~/config';
+import { getCanonical, getHomePermalink } from '~/utils/permalinks';
+import Layout from '~/layouts/PageLayout.astro';
+import { Image, Picture } from '@astrojs/image/components';
 
-const base = SITE.basePathname
-console.log('Base:', base)
+const base = SITE.basePathname;
+console.log('Base:', base);
 
 const meta = {
 	title: SITE.title,
 	description: SITE.description,
-	canonical: getCanonical(getHomePermalink())
-}
-const galleryPath = SITE.basePathname + '/Gallery/'
+	canonical: getCanonical(getHomePermalink()),
+};
+const galleryPath = SITE.basePathname + '/Gallery/';
 
 const images = [
 	{ id: '1', src: '1.jpg' },
@@ -31,29 +31,29 @@ const images = [
 	{ id: '14', src: '14.jpg' },
 	{ id: '15', src: '15.jpg' },
 	{ id: '16', src: '16.jpg' },
-	{ id: '17', src: '17.jpg' }
-]
+	{ id: '17', src: '17.jpg' },
+];
 ---
 
 <Layout {meta}>
-	<div class='carousel w-3/4 mx-auto'>
+	<div class="carousel w-3/4 mx-auto">
 		{
 			images.map((image) => (
-				<div id={'item' + image.id} class='carousel-item w-full'>
+				<div id={'item' + image.id} class="carousel-item w-full">
 					<Image
 						src={galleryPath + image.src}
-						height='500'
-						aspectRatio='16:9'
+						height="500"
+						aspectRatio="16:9"
 						alt={'Gallery' + image.id}
 					/>
 				</div>
 			))
 		}
 	</div>
-	<div class='flex justify-center w-full flex-wrap py-2 gap-2'>
+	<div class="flex justify-center w-full flex-wrap py-2 gap-2">
 		{
 			images.map((image) => (
-				<a href={'#item' + image.id} class='btn btn-xs'>
+				<a href={'#item' + image.id} class="btn btn-xs">
 					{image.id}
 				</a>
 			))

@@ -9,6 +9,7 @@
 [![ESLint](https://img.shields.io/badge/ESLint-3A33D1?logo=eslint)](https://eslint.org)
 
 ### Status
+
 [![Playwright Tests](https://github.com/michzuerch/PrivaterAutomarkt7/actions/workflows/playwright.yml/badge.svg)](https://github.com/michzuerch/PrivaterAutomarkt7/actions/workflows/playwright.yml)
 [![Deploy to GitHub Pages](https://img.shields.io/github/workflow/status/michzuerch/PrivaterAutomarkt5/DeployGhPages)](https://michzuerch.github.io/PrivaterAutomarkt5)
 [![W3C Validation GitHub Pages](https://img.shields.io/w3c-validation/default?targetUrl=https%3A%2F%2Fmichzuerch.github.io%2FPrivaterAutomarkt7)](https://michzuerch.github.io/PrivaterAutomarkt7)

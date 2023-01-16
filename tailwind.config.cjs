@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require('tailwindcss/defaultTheme');
 //const colors = require('tailwindcss/colors');
 
 module.exports = {
@@ -7,9 +7,9 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ["'InterVariable'", ...defaultTheme.fontFamily.sans]
-			}
-		}
+				sans: ["'InterVariable'", ...defaultTheme.fontFamily.sans],
+			},
+		},
 	},
 	plugins: [require('@tailwindcss/typography'), require('daisyui')],
 	darkMode: 'class',
@@ -32,15 +32,15 @@ module.exports = {
 					info: '#3ABFF8',
 					success: '#36D399',
 					warning: '#FBBD23',
-					error: '#F87272'
-				}
+					error: '#F87272',
+				},
 			},
 			'light',
 			'dark',
-			'cupcake'
-		]
-	}
-}
+			'cupcake',
+		],
+	},
+};
 
 /*
 

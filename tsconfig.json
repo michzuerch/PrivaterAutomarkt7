@@ -1,8 +1,9 @@
 {
-  "extends": "astro/tsconfigs/base",
+  "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "types": ["astro/client"],
     "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
     "baseUrl": ".",
     "paths": {
       "~/*": ["src/*"]

@@ -1,5 +1,5 @@
 ---
-import { Icon } from 'astro-icon'
+import { Icon } from 'astro-icon';
 
 const items = [
 	[
@@ -7,72 +7,72 @@ const items = [
 			title: 'Vermittlung',
 			description:
 				'An- und Verkauf, Verkaufsplatz ist eingezäunt und Videoüberwacht. Beste Vermittlung durch 40 Jahre Erfahrung. Probefahrten mit rotem Kennzeichen. Inzahlungnahme oder Entsorgung Ihres Altautos.',
-			icon: 'tabler:brand-tailwind'
+			icon: 'tabler:brand-tailwind',
 		},
 		{
 			title: 'Garantie',
 			description: 'Wena-Car Garantie für Gebrauchtfahrzeuge bis 24 Monate.',
-			icon: 'tabler:components'
+			icon: 'tabler:components',
 		},
 		{
 			title: 'Versicherung',
 			description: 'Versicherungsservice (Doppelkarten).',
-			icon: 'tabler:list-check'
-		}
+			icon: 'tabler:list-check',
+		},
 	],
 	[
 		{
 			title: 'Zulassung',
 			description:
 				'TUV und ASU Service. Partner mit KFZ-Werkstatt direkt vor Ort. Zulassungsservice, An.+ Ab.+ Ummeldung Ihres KFZ Zollnummer, Kurzzeitkennzeichen',
-			icon: 'tabler:rocket'
+			icon: 'tabler:rocket',
 		},
 		{
 			title: 'Finanzierung',
 			description:
 				'Ihnen gefällt unser Preis-/ Leistungsangebot, aber der Kaufpreis überschreitet Ihr Budget? Daran soll Ihr Wunsch nach einem Fahrzeug nicht scheitern! Wir bieten Ihnen neben preiswerten Fahrzeugen auch zinsgünstige Kredite an. Es gibt auch keine langen Wartezeiten für die Kreditentscheidung. Nachdem die Kreditanfrage online abgeschickt wurde, liegt innerhalb weniger Minuten eine Entscheidung vor.',
-			icon: 'tabler:arrows-right-left'
+			icon: 'tabler:arrows-right-left',
 		},
 		{
 			title: 'Internetverkauf',
 			description: '.',
-			icon: 'tabler:bulb'
-		}
-	]
-]
+			icon: 'tabler:bulb',
+		},
+	],
+];
 ---
 
-<section class='scroll-mt-16' id='features'>
-	<div class='px-4 py-16 mx-auto max-w-6xl lg:px-8 lg:py-20'>
-		<div class='mb-10 md:mx-auto sm:text-center md:mb-12 max-w-3xl'>
+<section class="scroll-mt-16" id="features">
+	<div class="px-4 py-16 mx-auto max-w-6xl lg:px-8 lg:py-20">
+		<div class="mb-10 md:mx-auto sm:text-center md:mb-12 max-w-3xl">
 			<p
-				class='text-base text-primary-600 dark:text-primary-200 font-semibold tracking-wide uppercase'
+				class="text-base text-primary-600 dark:text-primary-200 font-semibold tracking-wide uppercase"
 			>
 				Was wir Ihnen bieten:
 			</p>
-			<h2 class='text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading'>
+			<h2 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading">
 				Unsere Dienstleistungen
 			</h2>
-			<p class='max-w-3xl mx-auto sm:text-left text-xl text-gray-600 dark:text-slate-400'>
+			<p class="max-w-3xl mx-auto sm:text-left text-xl text-gray-600 dark:text-slate-400">
 				Unser Unternehmen vermittelt Gebrauchtwagen von Privat an Privat mit 27 jähriger Erfahrung.
 				Der Vorteil darin ist der Käufer bekommt ein Fahrzeug das weitaus billiger angeboten wird
 				als beim normalen Autohändler. Wir verkaufen auch Ihr Auto.
 			</p>
 		</div>
-		<div class='grid mx-auto space-y-6 md:grid-cols-2 md:space-y-0'>
+		<div class="grid mx-auto space-y-6 md:grid-cols-2 md:space-y-0">
 			{
 				items.map((subitems) => (
-					<div class='space-y-8 sm:px-8'>
+					<div class="space-y-8 sm:px-8">
 						{subitems.map(({ title, description, icon }) => (
-							<div class='flex flex-row max-w-md'>
-								<div class='mb-4 mr-4'>
-									<div class='flex items-center justify-center w-12 h-12 rounded-full bg-primary-500 dark:bg-primary-700'>
-										{icon && <Icon name={icon} class='w-6 h-6 text-white icon-light' />}
+							<div class="flex flex-row max-w-md">
+								<div class="mb-4 mr-4">
+									<div class="flex items-center justify-center w-12 h-12 rounded-full bg-primary-500 dark:bg-primary-700">
+										{icon && <Icon name={icon} class="w-6 h-6 text-white icon-light" />}
 									</div>
 								</div>
 								<div>
-									<h3 class='mb-3 text-xl font-bold'>{title}</h3>
-									<p class='text-gray-600 dark:text-slate-400'>{description}</p>
+									<h3 class="mb-3 text-xl font-bold">{title}</h3>
+									<p class="text-gray-600 dark:text-slate-400">{description}</p>
 								</div>
 							</div>
 						))}

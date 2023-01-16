@@ -1,28 +1,28 @@
 ---
-import { SITE } from '~/config'
-import { getCanonical, getHomePermalink } from '~/utils/permalinks'
-import Layout from '~/layouts/PageLayout.astro'
+import { SITE } from '~/config';
+import { getCanonical, getHomePermalink } from '~/utils/permalinks';
+import Layout from '~/layouts/PageLayout.astro';
 
-import Map from '~/components/widgets/Map.astro'
-import Icon from 'astro-icon'
+import Map from '~/components/widgets/Map.astro';
+import Icon from 'astro-icon';
 
 const meta = {
 	title: SITE.title,
 	description: SITE.description,
-	canonical: getCanonical(getHomePermalink())
-}
+	canonical: getCanonical(getHomePermalink()),
+};
 ---
 
 <Layout {meta}>
-	<div class='container mx-3 w-full h-auto'>
+	<div class="container mx-3 w-full h-auto">
 		<h1>So finden Sie uns...</h1>
 		<a
-			href='https://www.google.com/maps/dir//Herrenlandstra%C3%9Fe+39,+Radolfzell+am+Bodensee/@47.74296,8.9526913,17z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x479a61f70155e5cd:0xd257fb4114d3f2b9!2m2!1d8.95488!2d47.74296!3e2'
-			class='btn btn-primary gap-2 mb-4'
+			href="https://www.google.com/maps/dir//Herrenlandstra%C3%9Fe+39,+Radolfzell+am+Bodensee/@47.74296,8.9526913,17z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x479a61f70155e5cd:0xd257fb4114d3f2b9!2m2!1d8.95488!2d47.74296!3e2"
+			class="btn btn-primary gap-2 mb-4"
 		>
 			Navigiere mit Google Maps
-			<Icon name='logos:google-maps' class='w-5 h-5' />
+			<Icon name="logos:google-maps" class="w-5 h-5" />
 		</a>
-		<Map long='12' lat='15' zoom='8' />
+		<Map long="12" lat="15" zoom="8" />
 	</div>
 </Layout>
