@@ -19,10 +19,10 @@ test.describe('Lighthouse score', () => {
 		await playAudit({
 			page: page,
 			thresholds: {
-				performance: 80,
-				accessibility: 50,
-				'best-practices': 50,
-				seo: 50
+				performance: 90,
+				accessibility: 90,
+				'best-practices': 90,
+				seo: 90
 			},
 			port: 9222,
 			ignoreError: true,
@@ -34,9 +34,8 @@ test.describe('Lighthouse score', () => {
 					csv: false,
 					json: false
 				},
-				//name: `ligthouse-${new Date().toISOString()}`, //defaults to `lighthouse-${new Date().getTime()}`
-				name: `ligthouse`, //defaults to `lighthouse-${new Date().getTime()}`
-				directory: `${process.cwd()}/test-results` //defaults to `${process.cwd()}/lighthouse`
+				name: `ligthouse-${new Date().toISOString()}`, //defaults to `lighthouse-${new Date().getTime()}`
+				directory: `${process.cwd()}/test-report` //defaults to `${process.cwd()}/lighthouse`
 			}
 		})
 		await page.close()
