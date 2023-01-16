@@ -36,7 +36,7 @@ test.describe('Lighthouse score', () => {
 				},
 				//name: `ligthouse-${new Date().toISOString()}`, //defaults to `lighthouse-${new Date().getTime()}`
 				name: `ligthouse`, //defaults to `lighthouse-${new Date().getTime()}`
-				directory: `${process.cwd()}/lighthouse` //defaults to `${process.cwd()}/lighthouse`
+				directory: `${process.cwd()}/test-results` //defaults to `${process.cwd()}/lighthouse`
 			}
 		})
 		await page.close()
