@@ -1,6 +1,8 @@
 ---
+import { getHomePermalink } from '~/utils/permalinks';
 ---
 
-<span class="self-center ml-2 text-2xl md:text-xl font-bold whitespace-nowrap"
-	>Privater Automarkt</span
+<a
+	class="self-center ml-2 text-2xl md:text-xl font-bold whitespace-nowrap"
+	href={getHomePermalink()}>Privater Automarkt</a
 >
