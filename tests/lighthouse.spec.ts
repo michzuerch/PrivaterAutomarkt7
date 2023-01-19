@@ -1,21 +1,21 @@
 import { test, chromium } from '@playwright/test';
 import { playAudit } from 'playwright-lighthouse';
 
-test.beforeEach(async ({ page }) => {
-	await page.goto('http://localhost:3000/PrivaterAutomarkt7/');
-	//await page.waitForLoadState('networkidle');
-});
-
 test.describe('Lighthouse score', () => {
+	test.beforeEach(async ({ page }) => {
+		await page.goto('http://localhost:3000/PrivaterAutomarkt7/');
+		await page.waitForLoadState('networkidle');
+	});
+
 	test.skip(({ browserName }) => browserName !== 'chromium', 'Chromium only for lighthouse');
 
-	test('Lighthouse score', async () => {
+	test('Lighthouse score', async ({ page }) => {
 		const browser = await chromium.launch({
 			args: ['--remote-debugging-port=9222'],
 			headless: true,
 		});
-		const page = await browser.newPage();
-		await page.goto('http://localhost:3000/PrivaterAutomarkt7/');
+		// const page = await browser.newPage();
+		// await page.goto('http://localhost:3000/PrivaterAutomarkt7/');
 		await playAudit({
 			page: page,
 			thresholds: {

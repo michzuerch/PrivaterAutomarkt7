@@ -6,14 +6,14 @@ const config: PlaywrightTestConfig = {
 	testDir: './tests',
 	timeout: 60 * 1000,
 	fullyParallel: true,
-	workers: 15,
+	workers: 1,
 	reporter: process.env.CI
 		? 'github'
 		: [['html', { open: 'on-failure', outputFolder: 'test-report' }], ['list']],
 	use: {
 		actionTimeout: 50 * 1000,
-		// headless: true,
-		headless: false,
+		headless: true,
+		// headless: false,
 		locale: 'de-DE',
 		baseURL: 'http://localhost:3000/PrivaterAutomarkt7/',
 		// viewport: { width: 600, height: 900 },

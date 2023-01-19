@@ -1,17 +1,22 @@
 import { test, expect } from '@playwright/test';
 
-test.beforeEach(async ({ page }) => {
-	await page.goto('http://localhost:3000/PrivaterAutomarkt7/');
-	//await page.waitForLoadState('networkidle');
-});
-
 test.describe('Basics', () => {
+	test.beforeEach(async ({ page }) => {
+		await page.goto('http://localhost:3000/PrivaterAutomarkt7/');
+		await page.waitForLoadState('networkidle');
+	});
+
 	test('Page title is correct', async ({ page }) => {
 		await expect(page).toHaveTitle('Privater Automarkt Radolfzell');
 	});
 });
 
 test.describe('Links from index', () => {
+	test.beforeEach(async ({ page }) => {
+		await page.goto('http://localhost:3000/PrivaterAutomarkt7/');
+		await page.waitForLoadState('networkidle');
+	});
+
 	test('Check link/navigation for impressum', async ({ page }) => {
 		const getImpressum = page.getByRole('link', { name: 'Impressum' });
 		await expect(getImpressum).toHaveAttribute('href', '/PrivaterAutomarkt7/impressum/');
