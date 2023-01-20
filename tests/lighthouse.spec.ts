@@ -1,13 +1,15 @@
-import { test, chromium } from '@playwright/test';
+import { test, chromium, devices } from '@playwright/test';
 import { playAudit } from 'playwright-lighthouse';
 
 test.describe('Lighthouse score', () => {
+	test.use({ ...devices['Desktop Chrome'] });
+
 	test.beforeEach(async ({ page }) => {
 		await page.goto('http://localhost:3000/PrivaterAutomarkt7/');
 		await page.waitForLoadState('networkidle');
 	});
 
-	test.skip(({ browserName }) => browserName !== 'chromium', 'Chromium only for lighthouse');
+	// test.skip(({ browserName }) => browserName !== 'chromium', 'Chromium only for lighthouse');
 
 	test('Lighthouse score', async ({ page }) => {
 		const browser = await chromium.launch({
@@ -23,6 +25,7 @@ test.describe('Lighthouse score', () => {
 				accessibility: 90,
 				'best-practices': 90,
 				seo: 90,
+				pwa: 1,
 			},
 			port: 9222,
 			ignoreError: true,
