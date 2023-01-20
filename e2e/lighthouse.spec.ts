@@ -1,9 +1,8 @@
 import { test, chromium, devices } from '@playwright/test';
 import { playAudit } from 'playwright-lighthouse';
 
+test.use({ ...devices['Desktop Chrome'] });
 test.describe('Lighthouse score', () => {
-	test.use({ ...devices['Desktop Chrome'] });
-
 	test.beforeEach(async ({ page }) => {
 		await page.goto('http://localhost:3000/PrivaterAutomarkt7/');
 		await page.waitForLoadState('networkidle');
