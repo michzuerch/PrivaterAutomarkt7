@@ -8,7 +8,7 @@ test.describe('Lighthouse score', () => {
 		await page.waitForLoadState('networkidle');
 	});
 
-	// test.skip(({ browserName }) => browserName !== 'chromium', 'Chromium only for lighthouse');
+	test.skip(({ browserName }) => browserName !== 'chromium', 'Chromium only for lighthouse');
 
 	test('Lighthouse score', async ({ page }) => {
 		const browser = await chromium.launch({
