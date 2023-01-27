@@ -26,13 +26,13 @@ test.describe('Links from index', () => {
 	});
 
 	test('Check link/navigation for impressum', async ({ page }) => {
-		const mobileMenu = page.locator("//header[@id='header']/div[1]/div[1]/div[1]/label[1]");
-		await mobileMenu.hover();
-		await mobileMenu.click();
-
-		const getImpressum = page.locator("(//ul[contains(@class,'p - 2 mt - 3')]//a)[3]");
-		await expect(getImpressum).toHaveAttribute('href', '/PrivaterAutomarkt7/impressum/');
-		await getImpressum.click();
+		page.hover("//div[@class='dropdown']//label[1]");
+		await page
+			.locator('div')
+			.filter({ hasText: 'Fotogalerie Standort Impressum' })
+			.locator('label')
+			.click();
+		await page.getByRole('link', { name: 'Impressum' }).click();
 		await expect(page).toHaveURL(/.*impressum/);
 	});
 	// test('Check link/navigation for location', async ({ page }) => {
