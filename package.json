@@ -29,16 +29,17 @@
     "format": "prettier -w .",
     "test": "npx playwright test",
     "test:update-screenshots": "npx playwright test --update-snapshots",
+    "test:lighthouse": "npx playwright test ./e2e/lighthouseDesktop.spec.ts",
     "lint:eslint": "eslint . --ext .js,.ts,.astro",
     "lint:eslint:fix": "eslint . --ext .js,.astro,.ts,.tsx,.vue --fix --debug",
     "subfont": "subfont -ir --no-fallbacks --silent --root dist"
   },
   "devDependencies": {
-    "@astrojs/image": "^0.13.0",
-    "@astrojs/mdx": "^0.15.1",
+    "@astrojs/image": "^0.13.1",
+    "@astrojs/mdx": "^0.15.2",
     "@astrojs/rss": "^2.1.0",
-    "@astrojs/sitemap": "^1.0.0",
-    "@astrojs/tailwind": "^3.0.0",
+    "@astrojs/sitemap": "^1.0.1",
+    "@astrojs/tailwind": "^3.0.1",
     "@astrolib/analytics": "^0.3.0",
     "@astrolib/seo": "^0.3.0",
     "@fontsource/inter": "^4.5.15",
@@ -46,12 +47,12 @@
     "@tailwindcss/typography": "^0.5.9",
     "@types/leaflet": "1.9.0",
     "@types/node": "^18.11.18",
-    "@typescript-eslint/eslint-plugin": "^5.49.0",
-    "@typescript-eslint/parser": "^5.49.0",
-    "astro": "^2.0.2",
+    "@typescript-eslint/eslint-plugin": "^5.50.0",
+    "@typescript-eslint/parser": "^5.50.0",
+    "astro": "^2.0.4",
     "astro-compress": "1.1.28",
     "astro-icon": "^0.8.0",
-    "eslint": "^8.3.0",
+    "eslint": "^8.33.0",
     "eslint-config-standard": "17.0.0",
     "eslint-plugin-astro": "^0.23.0",
     "eslint-plugin-import": "2.27.5",
@@ -71,7 +72,7 @@
     "sharp": "^0.31.3",
     "subfont": "^6.12.4",
     "tailwindcss": "^3.2.4",
-    "typescript": "^4.9.4"
+    "typescript": "^4.9.5"
   },
   "engines": {
     "node": "^14.15.0 || >=16.0.0"

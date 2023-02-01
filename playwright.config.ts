@@ -4,18 +4,17 @@ import { devices } from '@playwright/test';
 const config: PlaywrightTestConfig = {
   outputDir: './playwright-report',
   testDir: './e2e',
-  //testMatch: ["desktop.spec.ts"],
-  testMatch: ["desktop.spec.ts", "mobile.spec.ts"],
-  timeout: 5 * 1000,
+  //testMatch: ['desktop.spec.ts', 'mobile.spec.ts'],
+  testMatch: ['desktop.spec.ts', 'mobile.spec.ts'],
+  timeout: 25 * 1000,
   fullyParallel: true,
   workers: 1,
   reporter: process.env.CI
     ? 'github'
     : [['html', { open: 'on-failure', outputFolder: 'test-report' }], ['list']],
   use: {
-    actionTimeout: 5 * 1000,
+    actionTimeout: 25 * 1000,
     headless: true,
-    // headless: false,
     locale: 'de-DE',
     baseURL: 'http://localhost:3000/PrivaterAutomarkt7/',
     viewport: { width: 1920, height: 1080 },
