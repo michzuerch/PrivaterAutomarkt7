@@ -9,7 +9,7 @@ const config: PlaywrightTestConfig = {
 	fullyParallel: true,
 	workers: 1,
 	reporter: process.env.CI
-		? [['github','list']]
+		? [['github', 'list']]
 		: [['html', { open: 'on-failure', outputFolder: 'test-report' }], ['list']],
 	use: {
 		actionTimeout: 25 * 1000,
@@ -20,7 +20,7 @@ const config: PlaywrightTestConfig = {
 		ignoreHTTPSErrors: true,
 		video: 'on',
 		trace: 'on',
-		screenshot: 'only-on-failure',
+		screenshot: 'on',
 	},
 	projects: [
 		{
