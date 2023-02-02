@@ -33,6 +33,5 @@ jobs:
           name: playwright-report
           path: |
             playwright-report/
-            test-report/
             !path/**/*.tmp
           retention-days: 30

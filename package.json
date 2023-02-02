@@ -29,7 +29,7 @@
     "format": "prettier -w .",
     "test": "npx playwright test",
     "test:update-screenshots": "npx playwright test --update-snapshots",
-    "test:lighthouse": "npx lighthouse http://localhost:3000/PrivaterAutomarkt7/ --output html --output-path ./test-report/lighthouse.html --view",
+    "test:lighthouse": "npx lighthouse http://localhost:3000/PrivaterAutomarkt7/ --output html --output-path ./lighthouse.html --view",
     "test:desktop": "npx playwright test desktop",
     "test:mobile": "npx playwright test mobile",
     "lint:eslint": "eslint . --ext .js,.ts,.astro",
