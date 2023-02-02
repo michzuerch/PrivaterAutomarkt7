@@ -5,7 +5,7 @@ on:
 
 jobs:
   e2e_test:
-    name: 'Playwright e2e tests, all OS'
+    name: 'Playwright all OS'
     timeout-minutes: 60
     runs-on: ${{ matrix.os }} 
     strategy:
@@ -18,7 +18,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
-          cache: npm
+          cache: 'npm'
       - name: Install dependencies
         run: npm ci
       - name: Install Playwright Browsers
@@ -31,5 +31,5 @@ jobs:
           name: playwright-report
           path: |
             playwright-report/
-            !path/**/*.tmp
+            test-report/
           retention-days: 30
