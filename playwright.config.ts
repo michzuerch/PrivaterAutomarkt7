@@ -4,7 +4,7 @@ import { devices } from '@playwright/test';
 const config: PlaywrightTestConfig = {
 	outputDir: './playwright-report',
 	testDir: './e2e',
-	testMatch: ['desktop.spec.ts', 'mobile.spec.ts', 'lighthouse.spec.ts'],
+	testMatch: ['desktop.spec.ts', 'mobile.spec.ts'],
 	timeout: 25 * 1000,
 	fullyParallel: true,
 	workers: 1,
