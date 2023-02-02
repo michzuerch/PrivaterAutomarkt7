@@ -1,4 +1,4 @@
-name: Playwright
+name: Playwright all OS
 
 on:
   workflow_dispatch:
