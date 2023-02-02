@@ -7,7 +7,7 @@ jobs:
   e2e_test:
     name: 'Playwright all OS'
     timeout-minutes: 60
-    runs-on: ${{ matrix.os }} 
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         node: [18]
