@@ -11,9 +11,6 @@ test.describe('Basics', () => {
 	});
 });
 
-
-
-
 test.describe('Back to home', () => {
 	test.use({ viewport: { width: 600, height: 900 } });
 

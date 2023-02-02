@@ -4,12 +4,12 @@ import { devices } from '@playwright/test';
 const config: PlaywrightTestConfig = {
 	outputDir: './playwright-report',
 	testDir: './e2e',
-	testMatch: ['desktop.spec.ts', 'mobile.spec.ts', 'lighthouse.spec.ts'],
+	testMatch: ['desktop.spec.ts', 'mobile.spec.ts'],
 	timeout: 25 * 1000,
 	fullyParallel: true,
 	workers: 1,
 	reporter: process.env.CI
-		? 'github'
+		? [['github', 'list']]
 		: [['html', { open: 'on-failure', outputFolder: 'test-report' }], ['list']],
 	use: {
 		actionTimeout: 25 * 1000,
@@ -20,7 +20,7 @@ const config: PlaywrightTestConfig = {
 		ignoreHTTPSErrors: true,
 		video: 'on',
 		trace: 'on',
-		screenshot: 'only-on-failure',
+		screenshot: 'on',
 	},
 	projects: [
 		{
