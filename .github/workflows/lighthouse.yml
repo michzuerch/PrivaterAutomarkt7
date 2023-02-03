@@ -10,8 +10,10 @@ jobs:
         uses: treosh/lighthouse-ci-action@v9
         with:
           urls: |
-            https://example.com/
-            https://example.com/blog
+            https://billig-car.de
+            https://www.mercedes-benz.de
+            https://www.opel.de
+            https://www.autohaus-blender.de
           budgetPath: ./budget.json # test performance budgets
           uploadArtifacts: true # save results as an action artifacts
           temporaryPublicStorage: true # upload lighthouse report to the temporary storage
